@@ -1,4 +1,4 @@
-package com.example.programmers
+package com.example.programmers.leve1
 
 val s1 = "Program29b8UYP"
 val s2 = "merS123"

@@ -1,4 +1,4 @@
-package com.example.programmers
+package com.example.programmers.leve1
 
 val a = 10
 val b = 12
