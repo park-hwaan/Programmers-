@@ -7,15 +7,16 @@ fun main(){
     val numbers = reader.readLine().split(" ").map { it.toInt() }.sorted()
     var sumList = mutableListOf<Int>()
 
-    for (one in 0 until numbers.size){
-        for(two in one+1 until numbers.size){
-            for(three in two+1 until numbers.size){
+    for (one in 0 until numbers.size -1){
+        for(two in one+1 until numbers.size-2){
+            for(three in two+1 until numbers.size-3){
                 sumList += numbers[one] + numbers[two] + numbers[three]
             }
         }
     }
 
     val newSumList = sumList.filter { it <= maxNum }
+    println(newSumList)
 
     println(newSumList.last())
 
