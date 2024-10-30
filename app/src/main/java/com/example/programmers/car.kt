@@ -14,7 +14,15 @@ fun getCarNames(): MutableList<Pair<String,Int>> {
 
 fun getAttemptCount(): Int {
     println("시도할 횟수는 몇 회인가요?")
-    return readLine()?.toIntOrNull() ?: throw IllegalArgumentException("숫자를 입력해야 합니다.")
+    val attemptInput = readLine() ?: throw IllegalArgumentException()
+
+    val attemptCount = attemptInput.toIntOrNull() ?: throw IllegalArgumentException("숫자를 입력해야 합니다.")
+
+    if (attemptCount <= 0) {
+        throw IllegalArgumentException("움수는 입력이 불가능합니다")
+    }
+
+    return attemptCount
 }
 
 
